@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="foodieApp">
 
 <head>
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 </head>
 
 <body id="app">
-    <div class="login">
+    <div class="login hidden">
         
         <div class="login-form">
             
@@ -57,41 +57,48 @@
 
         </div>
 <!--        End of login-form class-->
-        
-        <div class='welcome-message'>Welcome Back {{email}}</div>
+    </div>
+<!--        End of login class-->
+    
+    
+    <div class='welcome-message'>Welcome Back {{email}}</div>
 
-        <div class="main hidden">
-            <nav class="navbar navbar-default navbar-fixed">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Foodie</a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Order Online</a></li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+    
+    <div class="main" ng-controller="mainController">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Foodie</a>
                 </div>
-                <!-- /.container-fluid -->
-            </nav>
-            <div class="ui container">
-                <div class="hero">
-                    <p>Find the best restaurants in town</p>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Order Online</a></li>
+                    </ul>
                 </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div class="ui container">
+            <div class="hero">
+                <p>Find the best restaurants in town</p>
+            </div>
+            <div ng-repeat="restaurant in restaurants">
+                {{restaurant}}
             </div>
         </div>
-        
     </div>
+        
+    
 <!--    End of login class-->
     
     <script src="assets/Bootstrap/js/jquery.js"></script>
