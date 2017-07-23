@@ -9,11 +9,17 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.remove-border-property {
+    border: 0!important;
+    border-radius: 0!important;
+    margin-bottom: 0!important;
+}
+
 .hero {
     background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
     background-size: cover;
     min-height: 300px;
-    border-radius: 4px;
+    /*background-attachment: fixed;*/
     color: white;
     font-size: 36px;
     display: flex;
@@ -75,6 +81,11 @@ body {
 .rest-wrapper {
     display: flex;
     font-family: sans-serif;
+}
+
+#wrapper {
+    margin: 0;
+    padding: 0;
 }
 
 .rest-wrapper .image {
