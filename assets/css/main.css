@@ -18,7 +18,7 @@ body {
 .hero {
     background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
     background-size: cover;
-    min-height: 300px;
+    min-height: 400px;
     /*background-attachment: fixed;*/
     color: white;
     font-size: 36px;
@@ -26,6 +26,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.btn-color {
+    color: white;
+    background: #cb202d;
+}
+.btn-color:hover {
+    color: white;
+    opacity: 0.9;
+}
+.hero  #foodie-logo {
+    height: 120px; line-height: 120px; text-align: center; background-color: #cb202d; margin-top: 100px; width: 130px;
+    border-radius: 5px;
 }
 
 #app .navbar {
@@ -67,17 +80,27 @@ body {
     margin-bottom: 2rem;
 }
 
-.restaurant {
+/*.restaurant {
     background-color: white;
     position: relative;
-    width: 600px;
-    margin-left: auto;
+    width: 300px;
+    margin-left: 10px;
     margin-right: auto;
     margin-bottom: 2rem;
     padding: 2rem;
     border-radius: 4px;
-}
+}*/
 
+.restaurant {
+    background: #ffffff;
+    margin: 1px;
+    margin-top: 10px;
+    border-radius: 4px;
+
+}
+.myClass {
+    background: yellow;
+}
 .rest-wrapper {
     display: flex;
     font-family: sans-serif;
@@ -152,4 +175,8 @@ body {
 .search-bar form .input-wrapper {
    flex: 1;
    margin-right: 1rem;
+}
+
+.middle-outer {
+   margin-right: 50px; margin-left: 50px;
 }

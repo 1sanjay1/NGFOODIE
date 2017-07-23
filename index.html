@@ -96,15 +96,94 @@
               </div>
               <!-- /.container-fluid -->
           </nav>
+          <!-- <nav class="navbar navbar-default navbar-fixed-top remove-border-property" style="top: 50px; background:rgba(0,0,0,0.3);">
+            <div class="search-bar" style="margin-top: 10px;">
+                <form>
+                  <div class="input-wrapper">
+                    <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
+                  </div>
+                  <button type="submit" class="btn btn-default">Search</button>
+                </form>
+            </div>
+          </nav> -->
 
           <div class="ui remove-border-property">
+
               <div class="hero">
-                  <p>Find the best restaurants in town</p>
+
+                <div id="foodie-logo">
+                  Foodie
+                </div>
+
+                <p style="font-size: 2.3rem; margin-top: 30px;">Find the best restaurants in town</p>
+
+                <div class="search-bar" style="margin-top: 10px;">
+                    <form>
+                      <div class="input-wrapper">
+                        <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
+                      </div>
+                      <button type="submit" class="btn btn-color" style="">Search</button>
+                    </form>
+                </div>
               </div>
-              <div ng-repeat="restaurant in restaurants">
-                  {{restaurant}}
+
+
+
+              <!-- adding information of restaurant one by one  -->
+              <div class="middle-outer" style="">
+
+                <div ng-repeat="restaurant in restaurants | filter:searchResult" class="col-md-4">
+
+                  <div  class="row restaurant">
+                    <div class="col-md-10" style="margin-top: 10px;">
+                      <div class="rest-wrapper">
+                          <div class="image">
+                              <img src="{{restaurant.image}}" height="100" width="100">
+                          </div>
+                          <div class="rest-info">
+                              <div class="rest-category">
+                                 <small>{{restaurant.category}} </small>
+                              </div>
+                              <div class="rest-name">
+                              <strong>{{restaurant.name}}</strong>
+                              </div>
+                              <div>
+                                 <strong> {{restaurant.location}}</strong>
+                              </div>
+                              <div class="rest-address">
+                                  {{restaurant.address}}
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="rest-extra">
+                          <div class="type">
+                              <div><small>Cuisines:</small></div>
+                              <div><small>Cost for Two: </small></div>
+                              <div><small>Hours:</small></div>
+                          </div>
+                          <div class="value">
+                              <div>{{restaurant.cuisines}}</div>
+                              <div>₹ {{restaurant.cost | number}}</div>
+                              <div>{{restaurant.hours}}</div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-2">
+                    <div class="rating">
+                        <strong>{{restaurant.vote}}</strong>
+                    </div>
+                  </div>
               </div>
+
+            </div>
+          <!-- end restaurant information -->
+
           </div>
+          <!-- end of outer class -->
+
+        </div>
       </div>
       <!-- end of main container class -->
 
