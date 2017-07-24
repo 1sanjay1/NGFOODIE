@@ -1,0 +1,49 @@
+
+<div  class="row restaurant" ng-if="restaurant.name">
+  <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top: 10px;">
+    <div class="rest-wrapper">
+        <div class="image">
+            <img ng-src="{{restaurant.image}}" height="100" width="100">
+        </div>
+        <div class="rest-info">
+            <div class="rest-category">
+               <small>{{restaurant.category}} </small>
+            </div>
+            <div class="rest-name">
+              <strong>{{restaurant.name}}</strong>
+            </div>
+            <div>
+               <strong> {{restaurant.location}}</strong>
+            </div>
+            <div class="rest-address">
+                {{restaurant.address}}
+            </div>
+        </div>
+    </div>
+
+    <div class="rest-extra">
+        <div class="type">
+            <div><small>Cuisines:</small></div>
+            <div><small>Cost for Two: </small></div>
+            <div><small>Hours:</small></div>
+        </div>
+        <div class="value">
+            <div>{{restaurant.cuisines}}</div>
+            <div>₹ {{restaurant.cost | number}}</div>
+            <div>{{restaurant.hours}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-2 col-sm-2 col-xs-2">
+  <div class="rating">
+      <strong>{{restaurant.vote}}</strong>
+  </div>
+</div>
+</div>
+
+<div class="row" ng-hide="restaurant.name">
+  <div>
+    <img src="http://www.techgeck.com/wp-content/uploads/2015/02/error-404.jpg" class="img img-responsive" style="width: 300px; margin: 10% auto;">
+  </div>
+</div>

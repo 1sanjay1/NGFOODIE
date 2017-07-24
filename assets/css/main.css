@@ -19,7 +19,7 @@ body {
     background-image: url('https://anandipaliwal.files.wordpress.com/2015/06/food-table-relisted.jpg');
     background-size: cover;
     min-height: 400px;
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     color: white;
     font-size: 36px;
     display: flex;

@@ -18,8 +18,10 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Order Online</a></li>
+                  <li><a href="#!/home">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Order Online</a></li>
+                  <li><a href="#!/">Logout</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -47,7 +49,7 @@
 
           <p style="font-size: 2.3rem; margin-top: 30px;">Find the best restaurants in town</p>
 
-          <div class="search-bar" style="margin-top: 10px;display:none;">
+          <div class="search-bar" style="margin-top: 10px;">
               <form>
                 <div class="input-wrapper">
                   <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
@@ -68,14 +70,14 @@
               <div class="col-md-10" style="margin-top: 10px;">
                 <div class="rest-wrapper">
                     <div class="image">
-                        <img src="{{restaurant.image}}" height="100" width="100">
+                        <img ng-src="{{restaurant.image}}" height="100" width="100">
                     </div>
                     <div class="rest-info">
                         <div class="rest-category">
                            <small>{{restaurant.category}} </small>
                         </div>
                         <div class="rest-name">
-                        <strong>{{restaurant.name}}</strong>
+                          <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
                         </div>
                         <div>
                            <strong> {{restaurant.location}}</strong>
