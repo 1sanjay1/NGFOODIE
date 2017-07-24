@@ -18,177 +18,24 @@
 <!--    AngularJS file-->
     <script src="assets/Bootstrap/js/angular.min.js"></script>
 
+    <!-- angularJs file for routing in AngularJS -->
+    <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+
 </head>
 
 <body id="app">
 
   <div class="container-fluid">
 
+    <header>
 
-    <!-- login form : user will enter his/her credentials get access for this site -->
-    <div class="login hidden">
+    </header>
 
-        <div class="login-form">
+    <div ng-view></div>
 
-            <h3> Login </h3>
+    <footer>
 
-            <form name="loginForm">
-
-                <div class="form-group">
-                    <label for="user-email">Email address</label>
-                    <input type="email" class="form-control" id="user-email" placeholder="Email" name="email" ng-model="user.email" required="">
-                    <div ng-show="loginForm.email.$error.required">Required!</div>
-                    <div ng-show="loginForm.email.$error.email">This doesn't look like a valid email</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="user-password">Password</label>
-                    <input type="password" class="form-control" id="user-password" placeholder="Password" name="password" required="" ng-model="user.password" ng-minlength="6" ng-maxlength="15">
-                    <div ng-show="loginForm.password.$error.minlength">
-                    Password must be at least 6 characters long
-                    </div>
-                    <div ng-show="loginForm.password.$error.maxlength">
-                    Password must be at most 15 characters long
-                    </div>
-                    <div ng-show="loginForm.password.$error.required">
-                    Please enter your super secret ninja password
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>
-<!--                submit button-->
-            </form>
-<!--            end of form tag-->
-
-        </div>
-<!--        End of login-form class-->
-    </div>
-    <!--        End of login class-->
-
-
-    <!-- <div class='welcome-message'>Welcome Back {{email}}</div> -->
-
-      <!-- main page starts from here... -->
-      <div class="main" ng-controller="mainController">
-
-        <div class="row" >
-
-          <nav class="navbar navbar-default navbar-fixed-top remove-border-property">
-              <div class="container-fluid">
-                  <!-- Brand and toggle get grouped for better mobile display -->
-                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Foodie</a>
-                  </div>
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav navbar-right">
-                          <li><a href="#">About</a></li>
-                          <li><a href="#">Order Online</a></li>
-                      </ul>
-                  </div>
-                  <!-- /.navbar-collapse -->
-              </div>
-              <!-- /.container-fluid -->
-          </nav>
-          <!-- <nav class="navbar navbar-default navbar-fixed-top remove-border-property" style="top: 50px; background:rgba(0,0,0,0.3);">
-            <div class="search-bar" style="margin-top: 10px;">
-                <form>
-                  <div class="input-wrapper">
-                    <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
-                  </div>
-                  <button type="submit" class="btn btn-default">Search</button>
-                </form>
-            </div>
-          </nav> -->
-
-          <div class="ui remove-border-property">
-
-              <div class="hero">
-
-                <div id="foodie-logo">
-                  Foodie
-                </div>
-
-                <p style="font-size: 2.3rem; margin-top: 30px;">Find the best restaurants in town</p>
-
-                <div class="search-bar" style="margin-top: 10px;">
-                    <form>
-                      <div class="input-wrapper">
-                        <input type="text" class="form-control" placeholder="Search..." ng-model="searchResult">
-                      </div>
-                      <button type="submit" class="btn btn-color" style="">Search</button>
-                    </form>
-                </div>
-              </div>
-
-
-
-              <!-- adding information of restaurant one by one  -->
-              <div class="middle-outer" style="">
-
-                <div ng-repeat="restaurant in restaurants | filter:searchResult" class="col-md-4">
-
-                  <div  class="row restaurant">
-                    <div class="col-md-10" style="margin-top: 10px;">
-                      <div class="rest-wrapper">
-                          <div class="image">
-                              <img src="{{restaurant.image}}" height="100" width="100">
-                          </div>
-                          <div class="rest-info">
-                              <div class="rest-category">
-                                 <small>{{restaurant.category}} </small>
-                              </div>
-                              <div class="rest-name">
-                              <strong>{{restaurant.name}}</strong>
-                              </div>
-                              <div>
-                                 <strong> {{restaurant.location}}</strong>
-                              </div>
-                              <div class="rest-address">
-                                  {{restaurant.address}}
-                              </div>
-                          </div>
-                      </div>
-
-                      <div class="rest-extra">
-                          <div class="type">
-                              <div><small>Cuisines:</small></div>
-                              <div><small>Cost for Two: </small></div>
-                              <div><small>Hours:</small></div>
-                          </div>
-                          <div class="value">
-                              <div>{{restaurant.cuisines}}</div>
-                              <div>₹ {{restaurant.cost | number}}</div>
-                              <div>{{restaurant.hours}}</div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-md-2">
-                    <div class="rating">
-                        <strong>{{restaurant.vote}}</strong>
-                    </div>
-                  </div>
-              </div>
-
-            </div>
-          <!-- end restaurant information -->
-
-          </div>
-          <!-- end of outer class -->
-
-        </div>
-      </div>
-      <!-- end of main container class -->
-
-    </div>
-
+    </footer>
 
   </div>
   <!-- end of most outer container class -->
@@ -199,7 +46,7 @@
   <!-- attached jquery file -->
   <script src="assets/Bootstrap/js/jquery.js"></script>
 
-  <!-- attached bootstrap minfied jquery file -->
+  <!-- attached bootstrap minified jquery file -->
   <script src="assets/Bootstrap/js/bootstrap.min.js"></script>
 
   <!-- attached custom jquery file -->
