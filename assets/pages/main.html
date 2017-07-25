@@ -70,7 +70,7 @@
           <div ng-repeat="restaurant in restaurants | filter:searchResult" class="col-md-4">
 
             <div  class="row restaurant">
-              <div class="col-md-10" style="margin-top: 10px;">
+              <div class="col-md-10 col-sm-10 col-xs-10"style="margin-top: 10px;">
                 <div class="rest-wrapper">
                     <div class="image">
                         <img ng-src="{{restaurant.image}}" height="100" width="100">
@@ -105,7 +105,7 @@
                 </div>
             </div>
 
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-2 col-xs-2">
               <div class="rating">
                   <strong>{{restaurant.vote}}</strong>
               </div>
