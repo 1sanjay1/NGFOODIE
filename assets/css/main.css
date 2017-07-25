@@ -225,13 +225,7 @@ ul li.nav-item a {
 #third-footer ul li{
   display: inline-block;
 }
-/*#third-footer nav li  a:hover {
-  background: red;
+#copyright {
+  color: #3C3F46;
+  font-size: 10px;
 }
-#third-footer nav ul li.nav-item:hover,
-#third-footer nav ul li.nav-item a:hover,
-#third-footer nav ul li.nav-item a,
-#third-footer nav ul li.nav-item a:link {
-  background: transparent;
-  color: #ADB0B6;
-}*/
