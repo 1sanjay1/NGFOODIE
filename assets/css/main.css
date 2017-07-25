@@ -177,6 +177,61 @@ body {
    margin-right: 1rem;
 }
 
-/*.middle-outer {
-   margin-right: 50px; margin-left: 50px;
+/***** middle part of the website which shows restaurant informations ******/
+
+@media only screen and (min-width: 992px) {
+  .middle-outer {
+    margin-left: 10%; margin-right: 10%;
+  }
+}
+.middle-outer {
+  margin-top: 10px;
+}
+
+/***** Css for Footer ******/
+#main-footer {
+  margin-top: 50px;
+  border-top: 10px solid green;
+  background: #282C35;
+  padding-bottom: 30px;
+}
+#main-footer ul li {
+  font-size: 13px;
+}
+ul li.nav-item:hover,
+ul li.nav-item a:hover,
+ul li.nav-item a,
+ul li.nav-item a:link {
+  background: transparent;
+  color: #ADB0B6;
+}
+ul li.nav-item a {
+  padding-top: 0px;
+  padding-bottom: 5px;
+
+}
+.footer-headers {
+  font-size: 15px;
+  font-weight: bold;
+}
+#main-footer .middle-outer hr{
+
+}
+.footer-separator {
+  height: 1px;
+  background: #3C3F46;
+  margin-bottom: 20px;
+}
+#third-footer ul li{
+  display: inline-block;
+}
+/*#third-footer nav li  a:hover {
+  background: red;
+}
+#third-footer nav ul li.nav-item:hover,
+#third-footer nav ul li.nav-item a:hover,
+#third-footer nav ul li.nav-item a,
+#third-footer nav ul li.nav-item a:link {
+  background: transparent;
+  color: #ADB0B6;
 }*/

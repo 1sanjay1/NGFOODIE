@@ -1,7 +1,7 @@
 <!-- main page starts from here... -->
 <div class="main" ng-controller="mainController">
 
-  <div class="row" >
+  <div class="row">
 
     <nav class="navbar navbar-default navbar-fixed-top remove-border-property">
         <div class="container-fluid">
@@ -49,7 +49,7 @@
 
           <p style="font-size: 2.3rem; margin-top: 30px;">Find the best restaurants in town</p>
 
-          <div class="col-md-8 col-sm-8 col-xs-12">
+          <div class="col-md-5 col-sm-8 col-xs-12">
           <div class="search-bar" style="margin-top: 10px;">
               <form>
                 <div class="input-wrapper">
@@ -65,7 +65,7 @@
 
 
         <!-- adding information of restaurant one by one  -->
-        <div class="middle-outer" style="">
+        <div class="middle-outer">
 
           <div ng-repeat="restaurant in restaurants | filter:searchResult" class="col-md-4">
 
@@ -122,4 +122,207 @@
 </div>
 <!-- end of main container class -->
 
+</div>
+
+
+
+
+
+
+<!-- footer of the website -->
+<div class="row" id="main-footer">
+
+  <div class="row">
+    <div class="middle-outer">
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link footer-headers">About Zomato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Culture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link footer-headers">For Foodies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Code of Conduct</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Verified Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blogger Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Developers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mobile Apps</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link footer-headers">For Restaurants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Add a Restuarant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Claim your Listing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business Owner Guidelines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Restaurant Widgets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products for Business</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="middle-outer"><div class="footer-separator"></div>
+      <div class="col-md-4">
+
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link footer-headers">Countries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Australia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Brasil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Canada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Czech</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">India</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Indonesia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ireland</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Italy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lebanon</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Qatar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Singapore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">slovakia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">South Africa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sri Lanka</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row" id="third-footer">
+    <div class="middle-outer"><div class="footer-separator"></div>
+      <div class="col-md-8">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">API Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CSR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Security</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Facebook</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gmail</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
 </div>
