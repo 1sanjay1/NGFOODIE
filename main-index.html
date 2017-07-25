@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="foodieApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foodie</title>
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <style>
+        input.ng-invalid.ng-dirty {
+            border: 1px solid red;
+        }
+        body {
+          overflow-x: hidden;
+        }
+    </style>
+
+<!--    AngularJS file-->
+    <script src="assets/Bootstrap/js/angular.min.js"></script>
+
+    <!-- angularJs file for routing in AngularJS -->
+    <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+
+</head>
+
+<body id="app">
+
+  <div class="container-fluid">
+
+    <!-- <header>
+
+    </header> -->
+
+    <div ng-view></div>
+
+    <!-- <footer>
+
+    </footer> -->
+
+  </div>
+  <!-- end of most outer container class -->
+
+
+  <!-- All scripts files which are required, are included from here... -->
+
+  <!-- attached jquery file -->
+  <script src="assets/Bootstrap/js/jquery.js"></script>
+
+  <!-- attached bootstrap minified jquery file -->
+  <script src="assets/Bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- attached custom jquery file -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
