@@ -22,17 +22,32 @@
     </div>
 
     <div class="rest-extra">
-        <div class="type">
-            <div><small>Cuisines:</small></div>
-            <div><small>Cost for Two: </small></div>
-            <div><small>Hours:</small></div>
-        </div>
-        <div class="value">
-            <div>{{restaurant.cuisines}}</div>
-            <div>₹ {{restaurant.cost | number}}</div>
-            <div>{{restaurant.hours}}</div>
-        </div>
+      <div class="type">
+        <div><small>Cuisines:</small></div>
+        <div><small>Cost for Two: </small></div>
+        <div><small>Hours:</small></div>
+        <div ng-if="restaurant.bestDish"><small>Recommended: </small></div>
+      </div>
+      <div class="value">
+        <div>{{restaurant.cuisines}}</div>
+        <div>₹{{restaurant.cost | number}}</div>
+        <div>{{restaurant.hours}}</div>
+        <div class="bestDish" ng-if="restaurant.bestDish">
+	        <span>{{restaurant.bestDish.name}} </span>
+          <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
+
+		    </div>
+      </div>
     </div>
+
+    <div ng-if="ingredients">
+      <ol>
+        <li ng-repeat="ingredient in ingredients">
+          {{ingredient}}
+        </li>
+      </ol>
+    </div>
+
 </div>
 
 <div class="col-md-2 col-sm-2 col-xs-2">
@@ -44,6 +59,6 @@
 
 <div class="row" ng-hide="restaurant.name">
   <div>
-    <img src="http://www.techgeck.com/wp-content/uploads/2015/02/error-404.jpg" class="img img-responsive" style="width: 300px; margin: 10% auto;">
+    <img src="http://www.techgeck.com/wp-content/uploads/2015/02/error-404.jpg" class="img img-responsive" style="width: 300px; margin: 10% auto;" alt="404 Error">
   </div>
 </div>

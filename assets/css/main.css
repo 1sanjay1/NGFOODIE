@@ -241,3 +241,11 @@ ul li.nav-item a {
   color: #3C3F46;
   font-size: 10px;
 }
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

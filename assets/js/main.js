@@ -21,7 +21,7 @@ foodieApp.config(function ($routeProvider) {
 })
 
 // restaurants information controller
-foodieApp.controller('restaurantController',function($scope,$routeParams) {
+foodieApp.controller('restaurantController',function($scope,$routeParams,$http) {
 
 		$scope.restaurantId = $routeParams.id;
 
@@ -47,6 +47,10 @@ foodieApp.controller('restaurantController',function($scope,$routeParams) {
 	    cuisines: 'Modern Indian',
 	    cost: '2200',
 	    hours: '12 Noon to 1 AM (Mon-Sun)',
+			bestDish: {
+				name: 'Corn Pizza',
+				image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
+			},
 	    image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
 	  },
 	  {
@@ -87,6 +91,32 @@ foodieApp.controller('restaurantController',function($scope,$routeParams) {
 
 		$scope.restaurant = restaurants[$routeParams.id - 1];
 
+		$scope.ingredients = [];
+
+		$scope.getIngredients = function(url) {
+
+			var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
+
+			$http({
+				'method': 'POST',
+				'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
+				'headers': {
+					'Authorization': 'Key fa1aac10395e45408379764a27eb6fe8',
+					'Content-Type': 'application/json'
+				},
+				'data': data
+			}).then(function (response) {
+									var ingredients = response.data.outputs[0].data.concepts;
+									for (var i =0;i < ingredients.length;i++) {
+										$scope.ingredients.push(ingredients[i].name);
+									}
+							},function (xhr) {
+				      	console.log(xhr);
+				 });
+				// success:
+				//       error: </ingredients.length;i++)>
+		}
+
 })
 
 
@@ -125,6 +155,10 @@ foodieApp.controller('mainController',function($scope) {
     cuisines: 'Modern Indian',
     cost: '2200',
     hours: '12 Noon to 1 AM (Mon-Sun)',
+		// bestDish: {
+		// 	name: 'Corn Pizza',
+		// 	image: 'http://noblepig.com/images/2016/06/Avocado-and-Three-Bean-Salad-is-perfect-for-a-summertime-barbecue-side-dish.JPG'
+		// },
     image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
   },
   {
